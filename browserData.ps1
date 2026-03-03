@@ -1,3 +1,7 @@
+# Add these to the top of your script on GitHub
+if ($Global:dc) { $dc = $Global:dc }
+if ($Global:db) { $db = $Global:db }
+
 function Get-BrowserData {
 
     [CmdletBinding()]
